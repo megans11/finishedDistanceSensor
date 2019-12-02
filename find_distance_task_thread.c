@@ -27,6 +27,7 @@ void *findDistanceTaskThread(void *arg0)
         if (msg_type == MSG_TYPE_FALL)
         {
             distance = msg_buffer;
+            distance = distance * 10;
 
             char buffer[17];
             snprintf(buffer, sizeof(buffer), "distance %ld", distance);
